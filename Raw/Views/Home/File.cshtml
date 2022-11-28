@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "File Page";
+
+    var fileContent = ViewBag.FileContent as string[];
+    var selectedPath = ViewBag.SelectedPath;
+}
+
+<div class="code">
+    <span class="whitespace-prewrap">
+        @{
+            foreach (var line in fileContent)
+            {
+                if (line.Length > 0)
+                {
+                    @line
+                    <br />
+                }
+                else
+                {
+                    <br />
+                }
+            }
+        }
+    </span>
+</div>
