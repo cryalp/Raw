@@ -1,0 +1,87 @@
+@{
+    Layout = "_PublishedProjectsLayout";
+    ViewData["Title"] = "Folder Page";
+
+    var folderList = ViewBag.FolderList as List<PathType>;
+    var fileList = ViewBag.FileList as List<PathType>;
+    var selectedPath = ViewBag.SelectedPath as string;
+}
+
+@if (ViewBag.DescriptionContent != null)
+{
+    <div class="code">
+        <span class="whitespace-prewrap">
+            @{
+                foreach (var line in ViewBag.DescriptionContent)
+                {
+                    if (line.Length > 0)
+                    {
+                        @line
+                        <br />
+                    }
+                    else
+                    {
+                        <br />
+                    }
+                }
+            }
+        </span>
+    </div>
+}
+
+<table class="folder-table">
+    <thead>
+        <th>Path</th>
+        <th>Path Type</th>
+        <th>Open New Tab</th>
+    </thead>
+    <tbody>
+        @{
+            if (folderList != null)
+            {
+                foreach (var folder in folderList)
+                {
+                    <tr>
+                        <td>
+                            @Html.ActionLink(folder.Path, "Index", "PublishedProjects", new
+                {
+                SelectedPath = selectedPath + "\\" + folder.Path,
+                SelectedType = folder.Type
+                }, null)
+                        </td>
+                        <td>@folder.Type</td>
+                        <td>
+                            @Html.ActionLink(folder.Path, "Index", "PublishedProjects", new
+                {
+                SelectedPath = selectedPath + "\\" + folder.Path,
+                SelectedType = folder.Type
+                }, new { @target = "_blank" })
+                        </td>
+                    </tr>
+                }
+            }
+            if (fileList != null)
+            {
+                foreach (var file in fileList)
+                {
+                    <tr>
+                        <td>
+                            @Html.ActionLink(file.Path, "Index", "PublishedProjects", new
+                {
+                SelectedPath = selectedPath + "\\" + file.Path,
+                SelectedType = file.Type
+                }, null)
+                        </td>
+                        <td>@file.Type</td>
+                        <td>
+                            @{
+                                var fileHref = ViewBag.DefaultPath + selectedPath + "\\" + file.Path;
+                            }
+                            <a target="_blank" href="@Url.Content(fileHref)">@file.Path</a>
+                        </td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+</table>

@@ -1,20 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Diagnostics;
-using System.IO;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Raw.Models;
 
 namespace Raw.Controllers
 {
-    public class HomeController : Controller
+    public class ExperienceController : Controller
     {
         [HttpGet]
         public IActionResult Index()
         {
-            ViewBag.Title = "Özgeçmiş";
-            return View();
+            try
+            {
+                ViewBag.Title = "Tecrübe";
+                return View();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return View();
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

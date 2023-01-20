@@ -1,86 +1,111 @@
 ﻿@{
-    ViewData["Title"] = "Folder Page";
-
-    var folderList = ViewBag.FolderList as List<PathType>;
-    var fileList = ViewBag.FileList as List<PathType>;
-    var selectedPath = ViewBag.SelectedPath as string;
+    ViewData["Title"] = ViewBag.Title;
 }
 
-@if (ViewBag.DescriptionContent != null)
-{
-    <div class="code">
-        <span class="whitespace-prewrap">
-            @{
-                foreach (var line in ViewBag.DescriptionContent)
-                {
-                    if (line.Length > 0)
-                    {
-                        @line
-                        <br />
-                    }
-                    else
-                    {
-                        <br />
-                    }
-                }
-            }
-        </span>
+<h1 class="text-center mb-4">İnteraktif @ViewBag.Title</h1>
+
+<div class="row">
+    <div class="col p-0">
+        <a href="https://www.linkedin.com/in/cryalp/" target="_blank" class="main">
+            <div class="row m-0">
+                <div class="col text-end me-5 my-auto">
+                    <h2>Eğitim</h2>
+                    <p class="fw-bold">(Yapım aşamasında)</p>
+                </div>
+                <div class="rb-corner d-flex bg-white ms-auto">
+                    <img src="/icons/education.png" class="h-75 mx-auto my-auto" />
+                </div>
+            </div>
+        </a>
+        <div class="row h-5vh m-0 rv-line"></div>
     </div>
-}
-
-<table class="folder-table">
-    <thead>
-        <th>Path</th>
-        <th>Path Type</th>
-        <th>Open New Tab</th>
-    </thead>
-    <tbody>
-        @{
-            if (folderList != null)
-            {
-                foreach (var folder in folderList)
-                {
-                    <tr>
-                        <td>
-                            @Html.ActionLink(folder.Path, "Index", "Home", new
-                {
-                SelectedPath = selectedPath + "\\" + folder.Path,
-                SelectedType = folder.Type
-                }, null)
-                        </td>
-                        <td>@folder.Type</td>
-                        <td>
-                            @Html.ActionLink(folder.Path, "Index", "Home", new
-                {
-                SelectedPath = selectedPath + "\\" + folder.Path,
-                SelectedType = folder.Type
-                }, new { @target = "_blank" })
-                        </td>
-                    </tr>
-                }
-            }
-            if (fileList != null)
-            {
-                foreach (var file in fileList)
-                {
-                    <tr>
-                        <td>
-                            @Html.ActionLink(file.Path, "Index", "Home", new
-                {
-                SelectedPath = selectedPath + "\\" + file.Path,
-                SelectedType = file.Type
-                }, null)
-                        </td>
-                        <td>@file.Type</td>
-                        <td>
-                            @{
-                                var fileHref = ViewBag.DefaultPath + selectedPath + "\\" + file.Path;
-                            }
-                            <a target="_blank" href="@Url.Content(fileHref)">@file.Path</a>
-                        </td>
-                    </tr>
-                }
-            }
-        }
-    </tbody>
-</table>
+    <div class="separator"> </div>
+    <div class="col p-0">
+        <div class="row h-5vh m-0"></div>
+        <a href="@Url.Action("Index", "Experience")" class="main">
+            <div class="row m-0">
+                <div class="lb-corner d-flex bg-white">
+                    <img src="/icons/experience.png" class="h-75 mx-auto my-auto" />
+                </div>
+                <div class="col text-start ms-5 my-auto">
+                    <h2>Tecrübeler</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col p-0">
+        <a href="@Url.Action("Index", "PublishedProjects")" class="main">
+            <div class="row m-0">
+                <div class="col text-end me-5 my-auto">
+                    <h2>Projeler</h2>
+                    <p class="fw-bold">(Yapım aşamasında)</p>
+                </div>
+                <div class="rb-corner d-flex bg-white ms-auto">
+                    <img src="/icons/project.png" class="h-75 mx-auto my-auto" />
+                </div>
+            </div>
+        </a>
+        <div class="row h-5vh m-0 rv-line"></div>
+    </div>
+    <div class="separator rv-line"> </div>
+    <div class="separator"> </div>
+    <div class="separator lv-line"> </div>
+    <div class="col p-0">
+        <div class="row h-5vh m-0"></div>
+        <a href="https://www.linkedin.com/in/cryalp/" target="_blank" class="main">
+            <div class="row m-0">
+                <div class="lb-corner d-flex bg-white">
+                    <img src="/icons/award.png" class="h-75 mx-auto my-auto" />
+                </div>
+                <div class="col text-start ms-5 my-auto">
+                    <h2>Ödüller</h2>
+                    <p class="fw-bold">(Yapım aşamasında)</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col p-0">
+        <a href="https://github.com/cryalp" target="_blank" class="main">
+            <div class="row m-0">
+                <div class="col text-end me-5 my-auto">
+                    <h2>GitHub<br />Bağlantısı</h2>
+                </div>
+                <div class="rb-corner d-flex bg-white ms-auto">
+                    <img src="/icons/github.png" class="h-75 mx-auto my-auto" />
+                </div>
+            </div>
+        </a>
+        <div class="row h-5vh m-0 rv-line"></div>
+    </div>
+    <div class="separator rv-line"> </div>
+    <div class="separator rv-line"> </div>
+    <div class="separator"> </div>
+    <div class="separator lv-line"> </div>
+    <div class="separator lv-line"> </div>
+    <div class="col p-0">
+        <div class="row h-5vh m-0"></div>
+        <a href="https://www.linkedin.com/in/cryalp/" target="_blank" class="main">
+            <div class="row m-0">
+                <div class="lb-corner d-flex bg-white">
+                    <img src="/icons/linkedin.png" class="h-75 mx-auto my-auto" />
+                </div>
+                <div class="col text-start ms-5 my-auto">
+                    <h2>LinkedIn<br />Bağlantısı</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="row mx-auto d-flex-row-grow-1">
+    <div class="separator rv-line"></div>
+    <div class="separator rv-line"></div>
+    <div class="separator rv-line"></div>
+    <div class="separator"></div>
+    <div class="separator lv-line"></div>
+    <div class="separator lv-line"></div>
+    <div class="separator lv-line"></div>
+</div>

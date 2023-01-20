@@ -1,0 +1,40 @@
+{
+    "Elements": [
+        {
+            "Id": "TSK",
+            "Title": "TSK Bilgi İşlem Subayı",
+            "Description": "T.C. Milli Savunma Bakanlığı bağlısı Diyarbakır Askeralma Bölge Başkanlığında zorunlu askerlik dönemi boyunca Bilgi İşlem Subayı olarak çalıştım.",
+            "StartDate": "12.12.2021",
+            "EndDate": "25.10.2022",
+            "Logo": "/logo/tsk.png",
+            "LongDescription": "Buradaki görevim boyunca;\nPython kullanarak Personel Mail Sistemi,\nVBA(Excel) kullanarak Envanter Yönetim Sistemi,\nYine VBA(Excel) kullanarak İş Takip Sistemini,\n.BAT ve .PS1 dosya tiplerini kullanarak bilgisayarlar arasında ağ üzerinden Otomatik Veri Toplama Sistemini geliştirdim."
+        },
+        {
+            "Id": "HAVELSAN",
+            "Title": "HAVELSAN Stajyer",
+            "Description": " OPERASYONLAR VE ULUSLARARASI İŞ GEL. GMY (TEST MÜHENDİSLİĞİ GRUP MD.)'nde Stajyer olarak Test Otomasyon işlemleri üzerinde çalıştım.",
+            "StartDate": "10.08.2020",
+            "EndDate": "04.09.2020",
+            "Logo": "/logo/havelsan.png",
+            "LongDescription": ""
+        },
+        {
+            "Id": "BSEU_OgrPer",
+            "Title": "BŞEÜ Öğrenci Personel",
+            "Description": "Bilgi İşlem Daire Başkanlığında Yazılım Teknolojileri Şube Müdürlüğünde öğrenci personel pozisyonunda Yazılım Geliştirici olarak çalıştım.",
+            "StartDate": "10.10.2019",
+            "EndDate": "01.04.2020",
+            "Logo": "/logo/bseu.png",
+            "LongDescription": ""
+        },
+        {
+            "Id": "BSEU_Stajyer",
+            "Title": "BŞEÜ Stajyer",
+            "Description": "Bilgi İşlem Daire Başkanlığında Yazılım Teknolojileri Şube Müdürlüğünde stajyer pozisyonunda Yazılım Geliştirici olarak çalıştım.\nStaj-1 Programımı bitirdikten sonra aynı bölümde Öğrenci Personel olarak çalışmaya devam ettim.",
+            "StartDate": "10.06.2019",
+            "EndDate": "10.07.2019",
+            "Logo": "/logo/bseu.png",
+            "LongDescription": ""
+        }
+    ]
+}

@@ -12,6 +12,11 @@ a {
   color: #0366d6;
 }
 
+a.main {
+  color: var(--bs-body-color);
+  text-decoration: none;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -63,7 +68,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  background-color: #FFD700;
 }
 
 .head {
@@ -111,10 +116,155 @@ body {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   white-space: nowrap;
-  line-height: 60px;
+  line-height: 3rem;
   /* Vertically center the text there */
+}
+
+.fill-height {
+  height: calc(90vh - 60px)
+}
+
+:root {
+  --width: 10vw;
+  --height: 10vw;
+  --background-color: rgba(0, 0, 0, 0);
+  --border-width: 9px;
+  --border-color: #353535;
+  --border-style: solid;
+}
+
+.rb-text {
+  width: calc(var(--width) / 2);
+  height: var(--height);
+}
+
+.rb-corner {
+  border-radius: var(--width) var(--width) 0 var(--width);
+  width: var(--width);
+  height: var(--height);
+  border-color: var(--border-color);
+  border-style: var(--border-style);
+  border-width: var(--border-width);
+  background-color: var(--background-color);
+}
+
+.lb-corner {
+  border-radius: var(--width) var(--width) var(--width) 0;
+  width: var(--width);
+  height: var(--height);
+  border-color: var(--border-color);
+  border-style: var(--border-style);
+  border-width: var(--border-width);
+  background-color: var(--background-color);
+}
+
+.rv-line {
+  border-right: var(--border-width) var(--border-style) var(--border-color);
+}
+
+.lv-line {
+  border-left: var(--border-width) var(--border-style) var(--border-color);
+}
+
+.padding-right-0 {
+  padding-right: 0%
+}
+
+.padding-right-10 {
+  padding-right: 10%
+}
+
+.padding-right-20 {
+  padding-right: 20%
+}
+
+.padding-left-5 {
+  padding-left: 5%
+}
+
+.padding-left-15 {
+  padding-left: 15%
+}
+
+.padding-left-25 {
+  padding-left: 25%
+}
+
+.padding-top-5 {
+  padding-top: 5vh
+}
+
+.padding-top-10 {
+  padding-top: 10vh
+}
+
+.padding-top-15 {
+  padding-top: 15vh
+}
+
+.padding-top-25 {
+  padding-top: 25vh;
+}
+
+.padding-top-30 {
+  padding-top: 30vh;
+}
+
+.padding-top-35 {
+  padding-top: 35vh;
+}
+
+.padding-top-45 {
+  padding-top: 45vh;
+}
+
+.padding-top-55 {
+  padding-top: 55vh;
+}
+
+.padding-top-60 {
+  padding-top: 60vh;
+}
+
+.padding-top-65 {
+  padding-top: 65vh;
+}
+
+.align-vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.h-5vh {
+  height: 5vh;
+}
+
+.w-5vw {
+  width: 5vw;
+}
+
+.separator {
+  width: 5vw;
+  margin: 0;
+  padding: 0;
+}
+
+.d-flex-column-grow-1 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.d-flex-row-grow-1 {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+span p {
+  margin-bottom: 0.5rem;
 }
