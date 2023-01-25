@@ -1,111 +1,27 @@
 ﻿@{
     ViewData["Title"] = ViewBag.Title;
 }
+<div class="d-none" id="interactivePage"></div>
 
-<h1 class="text-center mb-4">İnteraktif @ViewBag.Title</h1>
+<img id="mainLoader" src="/icons/loadingBlack.gif" class="position-absolute w-100 h-100 top-0 start-0 m-fadeOut" alt="Loader">
+<div id="mainArea" class="d-flex-column-grow-1">
+    <h1 id="mainTitle" class="text-center mb-4">İnteraktif @ViewBag.Title</h1>
+    <div id="mainBlock" class="d-flex-column-grow-1"></div>
+</div>
 
-<div class="row">
-    <div class="col p-0">
-        <a href="https://www.linkedin.com/in/cryalp/" target="_blank" class="main">
-            <div class="row m-0">
-                <div class="col text-end me-5 my-auto">
-                    <h2>Eğitim</h2>
-                    <p class="fw-bold">(Yapım aşamasında)</p>
-                </div>
-                <div class="rb-corner d-flex bg-white ms-auto">
-                    <img src="/icons/education.png" class="h-75 mx-auto my-auto" />
-                </div>
+<!-- MODALS -->
+<div id="Info" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">İnteraktif İncele</h4>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-hidden="true"></button>
             </div>
-        </a>
-        <div class="row h-5vh m-0 rv-line"></div>
-    </div>
-    <div class="separator"> </div>
-    <div class="col p-0">
-        <div class="row h-5vh m-0"></div>
-        <a href="@Url.Action("Index", "Experience")" class="main">
-            <div class="row m-0">
-                <div class="lb-corner d-flex bg-white">
-                    <img src="/icons/experience.png" class="h-75 mx-auto my-auto" />
-                </div>
-                <div class="col text-start ms-5 my-auto">
-                    <h2>Tecrübeler</h2>
-                </div>
+            <div id="modal-body" class="modal-body">
             </div>
-        </a>
-    </div>
-</div>
-<div class="row">
-    <div class="col p-0">
-        <a href="@Url.Action("Index", "PublishedProjects")" class="main">
-            <div class="row m-0">
-                <div class="col text-end me-5 my-auto">
-                    <h2>Projeler</h2>
-                    <p class="fw-bold">(Yapım aşamasında)</p>
-                </div>
-                <div class="rb-corner d-flex bg-white ms-auto">
-                    <img src="/icons/project.png" class="h-75 mx-auto my-auto" />
-                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
             </div>
-        </a>
-        <div class="row h-5vh m-0 rv-line"></div>
+        </div>
     </div>
-    <div class="separator rv-line"> </div>
-    <div class="separator"> </div>
-    <div class="separator lv-line"> </div>
-    <div class="col p-0">
-        <div class="row h-5vh m-0"></div>
-        <a href="https://www.linkedin.com/in/cryalp/" target="_blank" class="main">
-            <div class="row m-0">
-                <div class="lb-corner d-flex bg-white">
-                    <img src="/icons/award.png" class="h-75 mx-auto my-auto" />
-                </div>
-                <div class="col text-start ms-5 my-auto">
-                    <h2>Ödüller</h2>
-                    <p class="fw-bold">(Yapım aşamasında)</p>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-<div class="row">
-    <div class="col p-0">
-        <a href="https://github.com/cryalp" target="_blank" class="main">
-            <div class="row m-0">
-                <div class="col text-end me-5 my-auto">
-                    <h2>GitHub<br />Bağlantısı</h2>
-                </div>
-                <div class="rb-corner d-flex bg-white ms-auto">
-                    <img src="/icons/github.png" class="h-75 mx-auto my-auto" />
-                </div>
-            </div>
-        </a>
-        <div class="row h-5vh m-0 rv-line"></div>
-    </div>
-    <div class="separator rv-line"> </div>
-    <div class="separator rv-line"> </div>
-    <div class="separator"> </div>
-    <div class="separator lv-line"> </div>
-    <div class="separator lv-line"> </div>
-    <div class="col p-0">
-        <div class="row h-5vh m-0"></div>
-        <a href="https://www.linkedin.com/in/cryalp/" target="_blank" class="main">
-            <div class="row m-0">
-                <div class="lb-corner d-flex bg-white">
-                    <img src="/icons/linkedin.png" class="h-75 mx-auto my-auto" />
-                </div>
-                <div class="col text-start ms-5 my-auto">
-                    <h2>LinkedIn<br />Bağlantısı</h2>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-<div class="row mx-auto d-flex-row-grow-1">
-    <div class="separator rv-line"></div>
-    <div class="separator rv-line"></div>
-    <div class="separator rv-line"></div>
-    <div class="separator"></div>
-    <div class="separator lv-line"></div>
-    <div class="separator lv-line"></div>
-    <div class="separator lv-line"></div>
 </div>

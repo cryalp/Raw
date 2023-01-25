@@ -132,6 +132,7 @@ body {
   --border-width: 9px;
   --border-color: #353535;
   --border-style: solid;
+  --transition-delay: 1.5s;
 }
 
 .rb-text {
@@ -243,14 +244,62 @@ body {
   height: 5vh;
 }
 
+.h-65 {
+  height: 65%;
+}
+
 .w-5vw {
   width: 5vw;
+}
+
+.w-65 {
+  width: 65%;
 }
 
 .separator {
   width: 5vw;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 320px) {
+  .rb-corner {
+    display: none !important;
+  }
+
+  .lb-corner {
+    display: none !important;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .rv-line {
+    display: none;
+  }
+
+  .lv-line {
+    display: none;
+  }
+
+  .row {
+    --bs-gutter-x: 5rem;
+  }
+
+  .col {
+    margin-bottom: 3rem
+  }
+
+  .rocket {
+    display: none;
+  }
+}
+
+.d-flex-column-grow-0 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
 }
 
 .d-flex-column-grow-1 {
@@ -267,4 +316,16 @@ body {
 
 span p {
   margin-bottom: 0.5rem;
+}
+
+.m-fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility var(--transition-delay) ease-out, opacity var(--transition-delay) ease-out;
+}
+
+.m-fadeIn {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility var(--transition-delay) ease-out, opacity var(--transition-delay) ease-out;
 }

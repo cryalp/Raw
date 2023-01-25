@@ -9,9 +9,10 @@
     @{
         await Html.RenderPartialAsync("_headerLayout");
     }
-    <main id="mainBlock" class="pb-5 container-fluid d-flex-column-grow-1">
+    <main class="pb-5 container-fluid d-flex-column-grow-1">
         @RenderBody()
     </main>
+    <img src="/icons/rocket.png" class="rocket position-absolute pb-5 bottom-0 end-0" width="150px" />
 
     @{
         await Html.RenderPartialAsync("_footerLayout");

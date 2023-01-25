@@ -1,40 +1,106 @@
 {
-    "Elements": [
-        {
-            "Id": "TSK",
-            "Title": "TSK Bilgi İşlem Subayı",
-            "Description": "T.C. Milli Savunma Bakanlığı bağlısı Diyarbakır Askeralma Bölge Başkanlığında zorunlu askerlik dönemi boyunca Bilgi İşlem Subayı olarak çalıştım.",
-            "StartDate": "12.12.2021",
-            "EndDate": "25.10.2022",
-            "Logo": "/logo/tsk.png",
-            "LongDescription": "Buradaki görevim boyunca;\nPython kullanarak Personel Mail Sistemi,\nVBA(Excel) kullanarak Envanter Yönetim Sistemi,\nYine VBA(Excel) kullanarak İş Takip Sistemini,\n.BAT ve .PS1 dosya tiplerini kullanarak bilgisayarlar arasında ağ üzerinden Otomatik Veri Toplama Sistemini geliştirdim."
-        },
-        {
-            "Id": "HAVELSAN",
-            "Title": "HAVELSAN Stajyer",
-            "Description": " OPERASYONLAR VE ULUSLARARASI İŞ GEL. GMY (TEST MÜHENDİSLİĞİ GRUP MD.)'nde Stajyer olarak Test Otomasyon işlemleri üzerinde çalıştım.",
-            "StartDate": "10.08.2020",
-            "EndDate": "04.09.2020",
-            "Logo": "/logo/havelsan.png",
-            "LongDescription": ""
-        },
-        {
-            "Id": "BSEU_OgrPer",
-            "Title": "BŞEÜ Öğrenci Personel",
-            "Description": "Bilgi İşlem Daire Başkanlığında Yazılım Teknolojileri Şube Müdürlüğünde öğrenci personel pozisyonunda Yazılım Geliştirici olarak çalıştım.",
-            "StartDate": "10.10.2019",
-            "EndDate": "01.04.2020",
-            "Logo": "/logo/bseu.png",
-            "LongDescription": ""
-        },
-        {
-            "Id": "BSEU_Stajyer",
-            "Title": "BŞEÜ Stajyer",
-            "Description": "Bilgi İşlem Daire Başkanlığında Yazılım Teknolojileri Şube Müdürlüğünde stajyer pozisyonunda Yazılım Geliştirici olarak çalıştım.\nStaj-1 Programımı bitirdikten sonra aynı bölümde Öğrenci Personel olarak çalışmaya devam ettim.",
-            "StartDate": "10.06.2019",
-            "EndDate": "10.07.2019",
-            "Logo": "/logo/bseu.png",
-            "LongDescription": ""
-        }
-    ]
+    "_": "Alp KIRAY CV.JSON",
+    "Main": {
+        "Title": "Özgeçmiş",
+        "Elements": [
+            {
+                "Id": "Education",
+                "Title": "Eğitim",
+                "Description": "Yapım aşamasında",
+                "StartDate": "",
+                "EndDate": "",
+                "Logo": "/icons/education.png",
+                "LongDescription": ""
+            },
+            {
+                "Id": "Experience",
+                "Title": "Tecrübeler",
+                "Description": "",
+                "StartDate": "",
+                "EndDate": "",
+                "Logo": "/icons/experience.png",
+                "LongDescription": "",
+                "RedirectTo": "Experience"
+            },
+            {
+                "Id": "Projects",
+                "Title": "Projeler",
+                "Description": "Yapım aşamasında",
+                "StartDate": "",
+                "EndDate": "",
+                "Logo": "/icons/project.png",
+                "LongDescription": ""
+            },
+            {
+                "Id": "Awards",
+                "Title": "Ödüller",
+                "Description": "Yapım aşamasında",
+                "StartDate": "",
+                "EndDate": "",
+                "Logo": "/icons/award.png",
+                "LongDescription": ""
+            },
+            {
+                "Id": "GitHub",
+                "Title": "GitHub Bağlantısı",
+                "Description": "",
+                "StartDate": "",
+                "EndDate": "",
+                "Logo": "/icons/github.png",
+                "LongDescription": "",
+                "Link": "https://github.com/cryalp"
+            },
+            {
+                "Id": "LinkedIn",
+                "Title": "LinkedIn Bağlantısı",
+                "Description": "",
+                "StartDate": "",
+                "EndDate": "",
+                "Logo": "/icons/linkedin.png",
+                "LongDescription": "",
+                "Link": "https://www.linkedin.com/in/cryalp/"
+            }
+        ]
+    },
+    "Experience": {
+        "Title": "Tecrübeler",
+        "Elements": [
+            {
+                "Id": "TSK",
+                "Title": "TSK Bilgi İşlem Subayı",
+                "Description": "T.C. Milli Savunma Bakanlığı bağlısı Diyarbakır Askeralma Bölge Başkanlığında zorunlu askerlik dönemi boyunca Bilgi İşlem Subayı olarak çalıştım.",
+                "StartDate": "12.12.2021",
+                "EndDate": "25.10.2022",
+                "Logo": "/logo/tsk.png",
+                "LongDescription": "Buradaki görevim boyunca;\nPython kullanarak Personel Mail Sistemi,\nVBA(Excel) kullanarak Envanter Yönetim Sistemi,\nYine VBA(Excel) kullanarak İş Takip Sistemini,\n.BAT ve .PS1 dosya tiplerini kullanarak bilgisayarlar arasında ağ üzerinden Otomatik Veri Toplama Sistemini geliştirdim."
+            },
+            {
+                "Id": "HAVELSAN",
+                "Title": "HAVELSAN Stajyer",
+                "Description": " OPERASYONLAR VE ULUSLARARASI İŞ GEL. GMY (TEST MÜHENDİSLİĞİ GRUP MD.)'nde Stajyer olarak Test Otomasyon işlemleri üzerinde çalıştım.",
+                "StartDate": "10.08.2020",
+                "EndDate": "04.09.2020",
+                "Logo": "/logo/havelsan.png",
+                "LongDescription": ""
+            },
+            {
+                "Id": "BSEU_OgrPer",
+                "Title": "BŞEÜ Öğrenci Personel",
+                "Description": "Bilgi İşlem Daire Başkanlığında Yazılım Teknolojileri Şube Müdürlüğünde öğrenci personel pozisyonunda Yazılım Geliştirici olarak çalıştım.",
+                "StartDate": "10.10.2019",
+                "EndDate": "01.04.2020",
+                "Logo": "/logo/bseu.png",
+                "LongDescription": ""
+            },
+            {
+                "Id": "BSEU_Stajyer",
+                "Title": "BŞEÜ Stajyer",
+                "Description": "Bilgi İşlem Daire Başkanlığında Yazılım Teknolojileri Şube Müdürlüğünde stajyer pozisyonunda Yazılım Geliştirici olarak çalıştım.\nStaj-1 Programımı bitirdikten sonra aynı bölümde Öğrenci Personel olarak çalışmaya devam ettim.",
+                "StartDate": "10.06.2019",
+                "EndDate": "10.07.2019",
+                "Logo": "/logo/bseu.png",
+                "LongDescription": ""
+            }
+        ]
+    }
 }
