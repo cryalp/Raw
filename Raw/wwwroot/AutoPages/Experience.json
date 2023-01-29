@@ -2,37 +2,158 @@
     "_": "Alp KIRAY CV.JSON",
     "Main": {
         "Title": "Özgeçmiş",
-        "Elements": [
-            {
-                "Id": "Education",
+        "Elements": {
+            "Education": {
                 "Title": "Eğitim",
-                "Description": "Yapım aşamasında",
+                "Description": "",
                 "StartDate": "",
                 "EndDate": "",
                 "Logo": "/icons/education.png",
-                "LongDescription": ""
+                "LongDescription": "",
+                "RedirectTo": "Main.Elements.Education",
+                "Elements": {
+                    "Üniversite": {
+                        "Title": "Bilecik Şeyh Edebali Üniversitesi",
+                        "Description": "Mühendislik Fakültesi - Bilgisayar Mühendisliği - 3.29 / 4.0",
+                        "StartDate": "25.10.2016",
+                        "EndDate": "10.02.2021",
+                        "Logo": "/logo/university.png",
+                        "LongDescription": ""
+                    },
+                    "Lise": {
+                        "Title": "Yalova Anadolu Öğretmen Lisesi",
+                        "Description": "",
+                        "StartDate": "2012",
+                        "EndDate": "2026",
+                        "Logo": "/logo/highSchool.png",
+                        "LongDescription": ""
+                    }
+                }
             },
-            {
-                "Id": "Experience",
+            "Experience": {
                 "Title": "Tecrübeler",
                 "Description": "",
                 "StartDate": "",
                 "EndDate": "",
                 "Logo": "/icons/experience.png",
                 "LongDescription": "",
-                "RedirectTo": "Experience"
+                "RedirectTo": "Main.Elements.Experience",
+                "Elements": {
+                    "TSK": {
+                        "Title": "TSK Bilgi İşlem Subayı",
+                        "Description": "T.C. Milli Savunma Bakanlığı bağlısı Diyarbakır Askeralma Bölge Başkanlığında zorunlu askerlik dönemi boyunca Bilgi İşlem Subayı olarak çalıştım.",
+                        "StartDate": "12.12.2021",
+                        "EndDate": "25.10.2022",
+                        "Logo": "/logo/tsk.png",
+                        "LongDescription": "Buradaki görevim boyunca;\nPython kullanarak Personel Mail Sistemi,\nVBA(Excel) kullanarak Envanter Yönetim Sistemi,\nYine VBA(Excel) kullanarak İş Takip Sistemini,\n.BAT ve .PS1 dosya tiplerini kullanarak bilgisayarlar arasında ağ üzerinden Otomatik Veri Toplama Sistemini geliştirdim."
+                    },
+                    "HAVELSAN": {
+                        "Title": "HAVELSAN Stajyer",
+                        "Description": " OPERASYONLAR VE ULUSLARARASI İŞ GEL. GMY (TEST MÜHENDİSLİĞİ GRUP MD.)'nde Stajyer olarak Test Otomasyon işlemleri üzerinde çalıştım.",
+                        "StartDate": "10.08.2020",
+                        "EndDate": "04.09.2020",
+                        "Logo": "/logo/havelsan.png",
+                        "LongDescription": ""
+                    },
+                    "BSEU_OgrPer": {
+                        "Title": "BŞEÜ Öğrenci Personel",
+                        "Description": "Bilgi İşlem Daire Başkanlığında Yazılım Teknolojileri Şube Müdürlüğünde öğrenci personel pozisyonunda Yazılım Geliştirici olarak çalıştım.",
+                        "StartDate": "10.10.2019",
+                        "EndDate": "01.04.2020",
+                        "Logo": "/logo/bseu.png",
+                        "LongDescription": ""
+                    },
+                    "BSEU_Stajyer": {
+                        "Title": "BŞEÜ Stajyer",
+                        "Description": "Bilgi İşlem Daire Başkanlığında Yazılım Teknolojileri Şube Müdürlüğünde stajyer pozisyonunda Yazılım Geliştirici olarak çalıştım.\nStaj-1 Programımı bitirdikten sonra aynı bölümde Öğrenci Personel olarak çalışmaya devam ettim.",
+                        "StartDate": "10.06.2019",
+                        "EndDate": "10.07.2019",
+                        "Logo": "/logo/bseu.png",
+                        "LongDescription": ""
+                    }
+                }
             },
-            {
-                "Id": "Projects",
+            "Projects": {
                 "Title": "Projeler",
-                "Description": "Yapım aşamasında",
+                "Description": "",
                 "StartDate": "",
                 "EndDate": "",
                 "Logo": "/icons/project.png",
-                "LongDescription": ""
+                "LongDescription": "",
+                "RedirectTo": "Main.Elements.Projects",
+                "Elements": {
+                    "Code:GrupChatV2": {
+                        "Title": "GrupChat V2",
+                        "Description": "Güvenli Dosya Gönderim Sistemi ile entegresi sağlanmış grupsal olarak yazışma yapılabilecek sistem.",
+                        "StartDate": "",
+                        "EndDate": "25 Ocak 2021",
+                        "Logo": "https://cdn.cryalp.com/img/logo3.png",
+                        "LongDescription": "",
+                        "Link": "https://chat.cryalp.com"
+                    },
+                    "Code:DuyuruMatik": {
+                        "Title": "DuyuruMatik",
+                        "Description": "Bölüm duyurularını otomatik olarak sosyal medya platformlarında paylaşan ve takibini sağlayan sistem.",
+                        "StartDate": "",
+                        "EndDate": "25 Ocak 2021",
+                        "Logo": "/logo/duyurumatik.png",
+                        "LongDescription": "Bu çalışmanın amacı, Bilgisayar Mühendisliği bölümümüzün sayfasında paylaşılmış duyuruların ögrencilerle sosyal medya platformları üzerinden daha hızlı ve daha çok etkileşimini saglamaktır.\n\nDuyuruların sosyal medyada da paylaşmak istenmesinin nedeni, ögrencilerin bu platformları gün içerisinde sıklıkla kullanması ve takip etmeleridir. Bölümün sayfasını sık takip etmediklerinde duyurular kendileri hakkında olsa dahi göremiyorlar. Bu yüzden işler aksayıp, kişilere bizzat ulaşmak gerekebiliyor. Bu çalışma ile duyurular istenilen platform üzerinden kullanıcının hareketleri taklit edilerek otomatik olarak ögrencilere ulaştırılabilecek.\nSistemin kullanıcı arayüzü üzerinden bölüm sayfasında paylaşılmış duyurular hangi platformda paylaşıldıgı takip edilebilecek ve bölümle alakalı olmayan duyurular da platformlara özel olarak paylaşılabilecek.",
+                        "InnerLink": {
+                            "Teknik Rapor": "https://git.cryalp.com/BM400-Thesis/BM400-OmerAlpKIRAY-BitirmeRaporu.pdf",
+                            "Bağlantı": "https://duyurumatik.cryalp.com"
+                        }
+                    },
+                    "Code:FlyPi": {
+                        "Title": "RPi Tabanlı Duvar Arkası Kontrollü Drone",
+                        "Description": "GPRS Sistemi Tabanlı Uzaktan Kontrollü Drone.",
+                        "StartDate": "",
+                        "EndDate": "10 Ocak 2020",
+                        "Logo": "/logo/drone.png",
+                        "LongDescription": "Askeri operasyonlarda askerlerin vücutlarını göstermeden hedef tespiti yapıp uzaktan kontrollü drone ile şaşırtma taktikleri yapmasına yardım edip imha etme olayını kolaylaştırmak. Ve zarar görmelerini engellemeye yardımcı olmak.\n\nEk olarak fiziki boşluk gerekmediği için kontrol sinyallerinin menzilini drone’un enerjisi yettiği yere kadar arttırmak.",
+                        "InnerLink": {
+                            "Teknik Rapor": "https://git.cryalp.com/ProjectReports/FlyPi.pdf"
+                        }
+                    },
+                    "Code:Mazi": {
+                        "Title": "BŞEÜ Önemli Olay Kayıt Sistemi",
+                        "Description": "BŞEÜ Üniversitesi Bilgi İşlem Daire Başkanlığında Yazılım Geliştirici Stajyer olarak çalıştığım sırada geliştirmiş olduğum bir proje.",
+                        "StartDate": "",
+                        "EndDate": "13.09.2019",
+                        "Logo": "/logo/history.png",
+                        "LongDescription": "Adından da anlaşılacağı üzere üniversitenin bölümlerinde ki önemli olayların manuel olarak kaydedilip daha sonra bir Slider üzerinden görüntülenebileceği sistem.",
+                        "InnerLink": {
+                            "Proje Mentörü 1": "https://www.linkedin.com/in/yusufmustu/",
+                            "Bağlantı": "https://mazi.bilecik.edu.tr"
+                        }
+                    },
+                    "Code:BGYS": {
+                        "Title": "BŞEÜ Bilgi Güvenliği Yönetim Sistemi",
+                        "Description": "BŞEÜ Üniversitesi Bilgi İşlem Daire Başkanlığında Yazılım Geliştirici Stajyer olarak çalıştığım sırada geliştirmiş olduğum bir proje.",
+                        "StartDate": "",
+                        "EndDate": "10.06.2019",
+                        "Logo": "/logo/dataSecurity.png",
+                        "LongDescription": "Adından da anlaşılacağı üzere üniversitenin Bilgi İşlem Daire Başkanlığında ISO 27001:2017 Bilgi Güvenliği ve Yönetim Sistemi sertifikası için kullanılan sistem.",
+                        "InnerLink": {
+                            "Proje Mentörü 1": "https://www.linkedin.com/in/yusufmustu/",
+                            "Proje Mentörü 2": "https://pvs.bilecik.edu.tr/bilge.karakas/",
+                            "Bağlantı": "https://bgys.bilecik.edu.tr"
+                        }
+                    },
+                    "Code:KalpOlc": {
+                        "Title": "Kaza Sonrası Takip Sistemi",
+                        "Description": "Teknofest 2019 yarışmasında üniversite düzeyinde İnsanlık Yararına Teknoloji kategorisinde finalist olarak yarıştığımız Kaza Sonrası Takip Sistemi.",
+                        "StartDate": "",
+                        "EndDate": "14 Haziran 2019",
+                        "Logo": "/logo/tracing.png",
+                        "LongDescription": "Sorunumuz: Araç kazalarında; sürücünün, kaza anında baygınlık geçirip kazayı bildirememesidir.\n\nNabız ve SpO2 sensörleri ile, sürücü anlık durumu; GPS Modülü ile, araç konumunu; GSM Modülü ile, '112 Acil'e çagrı göndererek sürücü durumunu ve araç konumu hakkında bilgiler iletecek. GPRS Modülü ile de verileri gerçek zamanlı veri tabanında güncel tutacak. '112 Acil' de bu bilgileri web sayfası ile gerçek zamanlı monitörleme yapabilecek.",
+                        "InnerLink": {
+                            "Teknik Rapor": "https://git.cryalp.com/ProjectReports/KazaSonrasiTakipSistemi.pdf",
+                            "Bağlantı": "https://kalpolc.cryalp.com"
+                        }
+                    }
+                }
             },
-            {
-                "Id": "Awards",
+            "Awards": {
                 "Title": "Ödüller",
                 "Description": "Yapım aşamasında",
                 "StartDate": "",
@@ -40,8 +161,7 @@
                 "Logo": "/icons/award.png",
                 "LongDescription": ""
             },
-            {
-                "Id": "GitHub",
+            "GitHub": {
                 "Title": "GitHub Bağlantısı",
                 "Description": "",
                 "StartDate": "",
@@ -50,8 +170,7 @@
                 "LongDescription": "",
                 "Link": "https://github.com/cryalp"
             },
-            {
-                "Id": "LinkedIn",
+            "LinkedIn": {
                 "Title": "LinkedIn Bağlantısı",
                 "Description": "",
                 "StartDate": "",
@@ -60,47 +179,6 @@
                 "LongDescription": "",
                 "Link": "https://www.linkedin.com/in/cryalp/"
             }
-        ]
-    },
-    "Experience": {
-        "Title": "Tecrübeler",
-        "Elements": [
-            {
-                "Id": "TSK",
-                "Title": "TSK Bilgi İşlem Subayı",
-                "Description": "T.C. Milli Savunma Bakanlığı bağlısı Diyarbakır Askeralma Bölge Başkanlığında zorunlu askerlik dönemi boyunca Bilgi İşlem Subayı olarak çalıştım.",
-                "StartDate": "12.12.2021",
-                "EndDate": "25.10.2022",
-                "Logo": "/logo/tsk.png",
-                "LongDescription": "Buradaki görevim boyunca;\nPython kullanarak Personel Mail Sistemi,\nVBA(Excel) kullanarak Envanter Yönetim Sistemi,\nYine VBA(Excel) kullanarak İş Takip Sistemini,\n.BAT ve .PS1 dosya tiplerini kullanarak bilgisayarlar arasında ağ üzerinden Otomatik Veri Toplama Sistemini geliştirdim."
-            },
-            {
-                "Id": "HAVELSAN",
-                "Title": "HAVELSAN Stajyer",
-                "Description": " OPERASYONLAR VE ULUSLARARASI İŞ GEL. GMY (TEST MÜHENDİSLİĞİ GRUP MD.)'nde Stajyer olarak Test Otomasyon işlemleri üzerinde çalıştım.",
-                "StartDate": "10.08.2020",
-                "EndDate": "04.09.2020",
-                "Logo": "/logo/havelsan.png",
-                "LongDescription": ""
-            },
-            {
-                "Id": "BSEU_OgrPer",
-                "Title": "BŞEÜ Öğrenci Personel",
-                "Description": "Bilgi İşlem Daire Başkanlığında Yazılım Teknolojileri Şube Müdürlüğünde öğrenci personel pozisyonunda Yazılım Geliştirici olarak çalıştım.",
-                "StartDate": "10.10.2019",
-                "EndDate": "01.04.2020",
-                "Logo": "/logo/bseu.png",
-                "LongDescription": ""
-            },
-            {
-                "Id": "BSEU_Stajyer",
-                "Title": "BŞEÜ Stajyer",
-                "Description": "Bilgi İşlem Daire Başkanlığında Yazılım Teknolojileri Şube Müdürlüğünde stajyer pozisyonunda Yazılım Geliştirici olarak çalıştım.\nStaj-1 Programımı bitirdikten sonra aynı bölümde Öğrenci Personel olarak çalışmaya devam ettim.",
-                "StartDate": "10.06.2019",
-                "EndDate": "10.07.2019",
-                "Logo": "/logo/bseu.png",
-                "LongDescription": ""
-            }
-        ]
+        }
     }
 }

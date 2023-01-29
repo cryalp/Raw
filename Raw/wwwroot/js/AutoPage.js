@@ -3,7 +3,7 @@ $(document).ready(() => {
     const mainArea = $("#mainArea");
     const mainBlock = $("#mainBlock");
 
-    const pageBuilder = async (pageName) => {
+    const pageBuilder = (pageName) => {
         mainBlock.html("");
         mainArea.toggleClass("d-none");
         mainLoader.toggleClass("m-fadeOut");
@@ -12,10 +12,13 @@ $(document).ready(() => {
             mainArea.toggleClass("d-none");
             mainLoader.toggleClass("m-fadeIn");
             mainLoader.toggleClass("m-fadeOut");
-            mainLoader.attr("src", Math.round(Math.random() * 2) ? "/icons/loadingBlack.gif" : "/icons/loadingWhite.gif")
-            const randX = Math.ceil(Math.random() * 1) * (Math.round(Math.random()) ? 1 : -1);
-            const randY = Math.ceil(Math.random() * 1) * (Math.round(Math.random()) ? 1 : -1);
-            mainLoader.css("transform", "scale(" + randX + "," + randY + ")")
+            mainLoader.attr("src", Math.round(Math.random() * 2) ? "/icons/loadingBlack.gif" : "/icons/loadingWhite.gif");
+            mainLoader.css("transform",
+                "scale("
+                + Math.ceil(Math.random() * 1) * (Math.round(Math.random()) ? 1 : -1)
+                + "," +
+                Math.ceil(Math.random() * 1) * (Math.round(Math.random()) ? 1 : -1)
+                + ")");
         }, 1000);
 
         if ($("#interactivePage").length > 0) {
@@ -31,11 +34,12 @@ $(document).ready(() => {
                 url: path,
                 dataType: "json",
                 success: (response) => {
-                    $("#mainTitle").html("İnteraktif " + response[pageName].Title)
-                    response[pageName].Elements.forEach((element, idx, array) => {
+                    response = getLeaf(response, pageName)
+                    $("#mainTitle").html("İnteraktif " + response.Title)
+                    Object.entries(response.Elements).forEach(([key, element], idx, array) => {
                         const column_Div = $("<div/>", { class: "col p-0 d-flex-column-grow-1" });
                         const element_A_href = element.RedirectTo ? element.RedirectTo : element.Link ? element.Link : "#Info";
-                        const element_A = $("<a/>", { href: element_A_href, id: element.Id, "data-toggle": "modal", class: "main" });
+                        const element_A = $("<a/>", { href: element_A_href, id: key, "data-toggle": "modal", class: "main" });
                         element_A.click(() => {
                             if (element.RedirectTo) {
                                 pageBuilder(element.RedirectTo);
@@ -46,25 +50,45 @@ $(document).ready(() => {
                                 return false;
                             }
 
-                            $("#modal-body").html("");
+                            const modalBody = $("#modal-body");
+                            modalBody.html("");
                             const modalTitle = $("<h2/>", { class: "text-center" });
                             modalTitle.html(element.Title);
                             modalTitle.css("background", "url(" + element.Logo + ") left top no-repeat");
                             modalTitle.css("background-size", "contain");
-                            modalTitle.appendTo("#modal-body");
+                            modalTitle.appendTo(modalBody);
 
-                            const modalDescription = $("<p/>", { class: "text-start" });
+                            const modalDescription = $("<p/>", { class: "text-start text-pre-line" });
                             modalDescription.html(element.Description);
-                            modalDescription.appendTo("#modal-body");
+                            modalDescription.appendTo(modalBody);
 
                             const modalStartEndDate = $("<p/>", { class: "text-center fw-bold" });
-                            modalStartEndDate.html(element.StartDate + " - " + element.EndDate);
-                            modalStartEndDate.appendTo("#modal-body");
+                            const elementStartEndDateText = element.StartDate ?
+                                element.EndDate ? element.StartDate + " - " + element.EndDate : element.StartDate
+                                :
+                                element.EndDate ? element.EndDate : "";
+                            modalStartEndDate.html(elementStartEndDateText);
+                            modalStartEndDate.appendTo(modalBody);
 
-                            const modalLongDescription = $("<p/>", { class: "text-start" });
-                            modalLongDescription.css("white-space", "pre-line")
+                            const modalLongDescription = $("<p/>", { class: "text-start text-pre-line" });
                             modalLongDescription.html(element.LongDescription);
-                            modalLongDescription.appendTo("#modal-body");
+                            modalLongDescription.appendTo(modalBody);
+
+                            if (element.InnerLink) {
+                                Object.entries(element.InnerLink).forEach(([key, elementInnerLink]) => {
+                                    const modalLink = $("<div/>", { class: "row" });
+
+                                    const modalLinkTitle = $("<h5/>", { class: "col-auto" });
+                                    modalLinkTitle.html(key + ": ");
+                                    modalLinkTitle.appendTo(modalLink);
+
+                                    const modalLinkHref = $("<a/>", { href: elementInnerLink, class: "col", target: "_blank" });
+                                    modalLinkHref.html(elementInnerLink);
+                                    modalLinkHref.appendTo(modalLink);
+
+                                    modalLink.appendTo(modalBody);
+                                });
+                            }
                         });
 
                         const element_A_Div = $("<div/>", { class: "row m-0" });
@@ -79,7 +103,7 @@ $(document).ready(() => {
                         element_A_Div_TextDiv_Title.html(element.Title);
                         element_A_Div_TextDiv_Title.appendTo(element_A_Div_TextDiv);
 
-                        const element_A_Div_TextDiv_Description = $("<span/>");
+                        const element_A_Div_TextDiv_Description = $("<span/>", { class: "text-pre-line" });
                         element_A_Div_TextDiv_Description.html(element.Description);
                         element_A_Div_TextDiv_Description.appendTo(element_A_Div_TextDiv);
 
@@ -94,18 +118,18 @@ $(document).ready(() => {
                         if (idx % 2 === 0) {
                             let element_A_Div_ColDiv = $("<div/>", { class: "col-auto p-0 d-flex-column-grow-0 ms-auto" });
                             let element_A_Div_LogoDiv = $("<div/>", { class: "rb-corner d-flex bg-white ms-auto" });
-                            const element_A_Div_LogoDiv_Img = $("<img/>", { src: element.Logo, class: "h-65 w-55 mx-auto my-auto" })
+                            const element_A_Div_LogoDiv_Img = $("<img/>", { src: element.Logo, class: "h-65 w-65 mx-auto my-auto" })
                             element_A_Div_LogoDiv_Img.appendTo(element_A_Div_LogoDiv);
                             element_A_Div_TextDiv.appendTo(element_A_Div);
                             element_A_Div_LogoDiv.appendTo(element_A_Div_ColDiv);
 
-                            let element_RowFiller = $("<div/>", { class: "flex-grow-1 m-0 rv-line" })
+                            let element_RowFiller = $("<div/>", { class: "flex-grow-1 m-0 rv-line" });
                             element_RowFiller.appendTo(element_A_Div_ColDiv);
 
                             element_A_Div_ColDiv.appendTo(element_A_Div);
                             element_A_Div.appendTo(element_A);
                             element_A.appendTo(column_Div);
-                            element_RowFiller = $("<div/>", { class: "flex-grow-1 m-0 rv-line" })
+                            element_RowFiller = $("<div/>", { class: "flex-grow-1 m-0 rv-line" });
                             element_RowFiller.appendTo(column_Div);
                             column_Div.appendTo(rowDiv);
                             leftColumnCount += 1;
@@ -126,18 +150,18 @@ $(document).ready(() => {
                         else {
                             let element_A_Div_ColDiv = $("<div/>", { class: "col-auto p-0 d-flex-column-grow-0 me-auto" });
                             let element_A_Div_LogoDiv = $("<div/>", { class: "lb-corner d-flex bg-white" });
-                            const element_A_Div_LogoDiv_Img = $("<img/>", { src: element.Logo, class: "h-65 w-65 mx-auto my-auto" })
+                            const element_A_Div_LogoDiv_Img = $("<img/>", { src: element.Logo, class: "h-65 w-65 mx-auto my-auto" });
                             element_A_Div_LogoDiv_Img.appendTo(element_A_Div_LogoDiv);
                             element_A_Div_LogoDiv.appendTo(element_A_Div_ColDiv);
 
-                            let element_RowFiller = $("<div/>", { class: "flex-grow-1 m-0 lv-line" })
+                            let element_RowFiller = $("<div/>", { class: "flex-grow-1 m-0 lv-line" });
                             element_RowFiller.appendTo(element_A_Div_ColDiv);
 
                             element_A_Div_ColDiv.appendTo(element_A_Div);
                             element_A_Div_TextDiv.appendTo(element_A_Div);
                             element_A_Div.appendTo(element_A);
                             element_A.appendTo(column_Div);
-                            element_RowFiller = $("<div/>", { class: "flex-grow-1 m-0 lv-line" })
+                            element_RowFiller = $("<div/>", { class: "flex-grow-1 m-0 lv-line" });
                             element_RowFiller.appendTo(column_Div);
                             column_Div.appendTo(rowDiv);
 
@@ -183,3 +207,10 @@ $(document).ready(() => {
     pageBuilder("Main");
 });
 
+const getLeaf = (tree, leafNameList) => {
+    leafNameList.split('.').forEach((currentLeaf) => {
+        tree = tree[currentLeaf]
+    });
+
+    return tree
+}
